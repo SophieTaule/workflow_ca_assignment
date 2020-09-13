@@ -1,0 +1,249 @@
+
+    /* color palette */
+    $primary: #39E289;
+    $black-clr: black;
+    $white-clr: #ffffff;
+    $darkgrey-clr: #484848;
+
+    /*Fonts*/ 
+    $ff-primary: 'Open Sans', sans-serif;
+    $fs-h1: 40px;
+    $fs-h2: 30px;
+    $fs-h3: 25px;
+    $fs-p: 18px;
+    $fw: 200;
+
+
+	
+	body{
+    font-family: $ff-primary;
+    font-family: $fs-p;
+    color: $black-clr;
+    font-style: normal;
+    font-weight: $fw;
+    margin-top: 0px;
+	}
+	
+	h1 { 
+	font-family: $ff-primary;
+	font-size: $fs-h1;
+	font-style: normal;
+	font-weight: $fw;
+	}
+	
+	
+	h2, h3 { 
+	font-family: $ff-primary;
+	font-size: $fs-h2;
+	font-style: normal;
+	font-weight: $fw;
+	}
+
+/* LINK */ 
+
+a {
+    &:link, &:visited {
+      background-color: $primary;
+      color: $white-clr;;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      list-style-type: none;
+      font-family: $ff-primary;
+    }
+  
+    &:hover, &:active {
+      background-color: $primary;;
+      font-family: $ff-primary;
+      color: $black-clr;
+    }
+  }
+  
+  .not-active {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: $black-clr;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    display: inline;
+  }
+  
+  li a {
+    display: inline;
+  }
+  
+
+	
+/* SIDEMENU AND MENU  */
+.navbar {
+  background-color: $primary;
+  font-size: $fs-h2;
+  padding: 0px;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding-top: 0px;
+  color: $white-clr;
+}
+
+.navbar a{
+  float:left;
+  display:block;
+  color: $white-clr;
+  text-align:center;
+  padding:14px 16px;
+  text-decoration:none;
+  font-size: $fs-p;
+  padding-top: 0px;
+}
+
+.navbar ul{
+  margin:0px 0 0 0;
+  list-style:none;
+  padding-top: 0px;
+}
+
+.navbar a:hover{
+  background-color: $primary;
+  color:$white-clr;
+}
+/*mobile navigation menu*/
+.side-nav{
+  height:100%;
+  width:0;
+  position:fixed;
+  z-index:1;
+  top:15px;
+  left:0;
+  background-color:$white-clr;
+  opacity:0.9;
+  overflow-x:hidden;
+  padding-top:60px;
+  transition:0.5s;
+}
+
+.side-nav a{
+  padding:10px 10px 10px 30px;
+  text-decoration:none;
+  font-size: $fs-h3;
+  color: $white-clr;
+  display:block;
+  transition:0.3s;
+  color: $black-clr;
+  background-color: $white-clr;
+  opacity:0.9;
+}
+
+.side-nav a:hover{
+  color: $white-clr;
+  background-color: $primary;
+  opacity:0.9;
+}
+
+.side-nav .btn-close{
+  position:absolute;
+  top:0;
+  right:22px;
+  font-size: $fs-h2;
+  margin-left:50px;
+}
+
+#main{
+  transition:margin-left 0.5s;
+  padding:20px;
+  overflow:hidden;
+  width:100%;
+}
+
+	
+ /* COLUMNS*/
+	
+.column-one, .column-two {
+    background-color: $white-clr;
+    width: 100%;
+    float: center;
+    min-height: 100px;
+    padding-top: 100px;
+    color:  $darkgrey-clr;
+    text-align: center;
+    }
+
+    .column-one {
+    padding-right: 3%;
+    }
+        
+    .column-two {
+    padding-left: 3%;
+    }
+
+	
+	
+/* TRACKS AND CONTACT PAGE */ 	
+.tracks, .contact, .about{
+    background-color:  $white-clr;
+    width: 100%;
+    float: center;
+    padding-right: 3%;
+    min-height: 100px;
+    padding-top: 100px;
+    color:  $darkgrey-clr;
+    text-align: center;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  background-color: $white-clr;
+} 
+
+/* FOOTER*/
+
+.footer {
+	background:  $primary;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	font-size: $fs-p;
+	color: $white-clr;
+	text-align: center;
+	display: block;
+	margin: 0px 0px 0px 0px;
+	font-family: $ff-primary;
+}
+
+ /* Media  */
+
+ /* navbar*/
+ @media(max-width:560px){
+  .navbar-nav{display: visible}
+}
+
+@media(min-width:560px){
+  .open-slide{display:visible}
+}
+
+ @media only screen and (max-width:860px) {
+  .column-one, .column-two,  .column-three  {
+    width: 80%;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width:860px) {
+  iframe {
+	  width: 300px;
+	  height: 300px;
+  }
+}
